@@ -1,580 +1,741 @@
 import _ from 'lodash';
 
 const inventory = [
-  {
-    id: 12,
-    name: 'Y-Solowarm',
-    description: 'Mandatory stable internet solution',
-    price: '8.67',
-    category: 'Automotive',
-  },
-  {
-    id: 27,
-    name: 'Bitchip',
-    description: 'Team-oriented optimal hub',
-    price: '4.06',
-    category: 'Automotive',
-  },
-  {
-    id: 91,
-    name: 'Flexidy',
-    description: 'Profound uniform database',
-    price: '2.27',
-    category: 'Automotive',
-  },
-  {
-    id: 6,
-    name: 'Redhold',
-    description: 'Optional holistic leverage',
-    price: '6.30',
-    category: 'Baby',
-  },
-  {
-    id: 15,
-    name: 'Daltfresh',
-    description: 'Operative asymmetric customer loyalty',
-    price: '1.73',
-    category: 'Baby',
-  },
-  {
-    id: 26,
-    name: 'Sonsing',
-    description: 'Centralized 4th generation superstructure',
-    price: '3.19',
-    category: 'Beauty',
-  },
-  {
-    id: 154,
-    name: 'Aerified',
-    description: 'Right-sized impactful circuit',
-    price: '1.49',
-    category: 'Beauty',
-  },
-  {
-    id: 20,
-    name: 'Bamity',
-    description: 'Managed full-range collaboration',
-    price: '0.76',
-    category: 'Books',
-  },
-  {
-    id: 23,
-    name: 'Biodex',
-    description: 'Expanded system-worthy groupware',
-    price: '7.20',
-    category: 'Books',
-  },
-  {
-    id: 13,
-    name: 'Viva',
-    description: 'Polarised stable website',
-    price: '9.46',
-    category: 'Clothing',
-  },
-  {
-    id: 18,
-    name: 'Cookley',
-    description: 'Expanded systemic analyzer',
-    price: '0.81',
-    category: 'Clothing',
-  },
-  {
-    id: 5,
-    name: 'Sonair',
-    description: 'Horizontal even-keeled internet solution',
-    price: '8.62',
-    category: 'Computers',
-  },
-  {
-    id: 31,
-    name: 'Span',
-    description: 'Proactive attitude-oriented approach',
-    price: '6.94',
-    category: 'Computers',
-  },
-  {
-    id: 114,
-    name: 'Gembucket',
-    description: 'Open-architected interactive Graphic Interface',
-    price: '2.87',
-    category: 'Computers',
-  },
-  {
-    id: 130,
-    name: 'Quo Lux',
-    description: 'Total tertiary approach',
-    price: '8.41',
-    category: 'Computers',
-  },
-  {
-    id: 9,
-    name: 'Rank',
-    description: 'Expanded exuding encoding',
-    price: '8.47',
-    category: 'Electronics',
-  },
-  {
-    id: 25,
-    name: 'Fintone',
-    description: 'Team-oriented bifurcated array',
-    price: '5.85',
-    category: 'Electronics',
-  },
-  {
-    id: 33,
-    name: 'Solarbreeze',
-    description: 'Customizable scalable methodology',
-    price: '8.27',
-    category: 'Electronics',
-  },
-  {
-    id: 50,
-    name: 'Bytecard',
-    description: 'Multi-layered reciprocal initiative',
-    price: '7.13',
-    category: 'Electronics',
-  },
-  {
-    id: 167,
-    name: 'Otcom',
-    description: 'Sharable high-level matrix',
-    price: '0.01',
-    category: 'Electronics',
-  },
-  {
-    id: 178,
-    name: 'Regrant',
-    description: 'Face to face grid-enabled forecast',
-    price: '6.89',
-    category: 'Electronics',
-  },
-  {
-    id: 65,
-    name: 'Veribet',
-    description: 'Grass-roots demand-driven function',
-    price: '7.60',
-    category: 'Games',
-  },
-  {
-    id: 80,
-    name: 'Voltsillam',
-    description: 'Progressive hybrid productivity',
-    price: '7.55',
-    category: 'Games',
-  },
-  {
-    id: 242,
-    name: 'It',
-    description: 'Synergistic logistical info-mediaries',
-    price: '7.35',
-    category: 'Games',
-  },
-  {
-    id: 342,
-    name: 'Opela',
-    description: 'Networked composite emulation',
-    price: '5.72',
-    category: 'Games',
-  },
-  {
-    id: 29,
-    name: 'Ronstring',
-    description: 'Customizable optimizing hierarchy',
-    price: '8.89',
-    category: 'Garden',
-  },
-  {
-    id: 46,
-    name: 'Job',
-    description: 'Front-line bandwidth-monitored system engine',
-    price: '7.20',
-    category: 'Garden',
-  },
-  {
-    id: 227,
-    name: 'Konklab',
-    description: 'Upgradable even-keeled structure',
-    price: '2.14',
-    category: 'Garden',
-  },
-  {
-    id: 11,
-    name: 'Zoolab',
-    description: 'Reactive leading edge access',
-    price: '4.29',
-    category: 'Grocery',
-  },
-  {
-    id: 86,
-    name: 'Pannier',
-    description: 'Focused secondary approach',
-    price: '0.09',
-    category: 'Grocery',
-  },
-  {
-    id: 103,
-    name: 'Tin',
-    description: 'Programmable demand-driven installation',
-    price: '1.14',
-    category: 'Grocery',
-  },
-  {
-    id: 111,
-    name: 'Vagram',
-    description: 'Self-enabling multi-state challenge',
-    price: '5.38',
-    category: 'Grocery',
-  },
-  {
-    id: 2,
-    name: 'Trippledex',
-    description: 'Ergonomic stable pricing structure',
-    price: '8.45',
-    category: 'Health',
-  },
-  {
-    id: 34,
-    name: 'Zontrax',
-    description: 'Compatible impactful firmware',
-    price: '9.87',
-    category: 'Health',
-  },
-  {
-    id: 52,
-    name: 'Wrapsafe',
-    description: 'Upgradable mission-critical encryption',
-    price: '8.31',
-    category: 'Health',
-  },
-  {
-    id: 70,
-    name: 'Home Ing',
-    description: 'Synergized heuristic toolset',
-    price: '3.02',
-    category: 'Health',
-  },
-  {
-    id: 89,
-    name: 'Namfix',
-    description: 'Up-sized encompassing algorithm',
-    price: '4.90',
-    category: 'Health',
-  },
-  {
-    id: 117,
-    name: 'Stringtough',
-    description: 'Assimilated disintermediate pricing structure',
-    price: '4.54',
-    category: 'Health',
-  },
-  {
-    id: 42,
-    name: 'Alphazap',
-    description: 'Proactive impactful moratorium',
-    price: '3.08',
-    category: 'Home',
-  },
-  {
-    id: 98,
-    name: 'Sub-Ex',
-    description: 'Progressive disintermediate database',
-    price: '6.97',
-    category: 'Home',
-  },
-  {
-    id: 197,
-    name: 'Domainer',
-    description: 'Decentralized needs-based architecture',
-    price: '1.78',
-    category: 'Home',
-  },
-  {
-    id: 7,
-    name: 'Zathin',
-    description: 'Ameliorated bi-directional strategy',
-    price: '6.13',
-    category: 'Industrial',
-  },
-  {
-    id: 22,
-    name: 'Mat Lam Tam',
-    description: 'Inverse motivating groupware',
-    price: '6.92',
-    category: 'Industrial',
-  },
-  {
-    id: 68,
-    name: 'Zamit',
-    description: 'Organized empowering knowledge user',
-    price: '5.78',
-    category: 'Industrial',
-  },
-  {
-    id: 14,
-    name: 'Konklux',
-    description: 'Object-based even-keeled frame',
-    price: '8.50',
-    category: 'Jewelery',
-  },
-  {
-    id: 19,
-    name: 'Lotstring',
-    description: 'Upgradable human-resource conglomeration',
-    price: '1.69',
-    category: 'Jewelery',
-  },
-  {
-    id: 36,
-    name: 'Temp',
-    description: 'Decentralized user-facing access',
-    price: '7.54',
-    category: 'Jewelery',
-  },
-  {
-    id: 97,
-    name: 'Cardify',
-    description: 'Front-line attitude-oriented groupware',
-    price: '5.28',
-    category: 'Jewelery',
-  },
-  {
-    id: 24,
-    name: 'Tampflex',
-    description: 'Realigned mission-critical adapter',
-    price: '9.78',
-    category: 'Kids',
-  },
-  {
-    id: 72,
-    name: 'Zaam-Dox',
-    description: 'Digitized context-sensitive concept',
-    price: '0.75',
-    category: 'Kids',
-  },
-  {
-    id: 208,
-    name: 'Fix San',
-    description: 'Reduced intangible superstructure',
-    price: '4.22',
-    category: 'Kids',
-  },
-  {
-    id: 88,
-    name: 'Ventosanzap',
-    description: 'Open-source foreground portal',
-    price: '8.66',
-    category: 'Movies',
-  },
-  {
-    id: 159,
-    name: 'Bigtax',
-    description: 'Horizontal uniform middleware',
-    price: '1.28',
-    category: 'Movies',
-  },
-  {
-    id: 8,
-    name: 'Tempsoft',
-    description: 'Fundamental stable structure',
-    price: '0.61',
-    category: 'Music',
-  },
-  {
-    id: 44,
-    name: 'Holdlamis',
-    description: 'Exclusive explicit local area network',
-    price: '8.77',
-    category: 'Music',
-  },
-  {
-    id: 45,
-    name: 'Subin',
-    description: 'Sharable content-based local area network',
-    price: '0.38',
-    category: 'Music',
-  },
-  {
-    id: 54,
-    name: 'Tres-Zap',
-    description: 'Programmable eco-centric budgetary management',
-    price: '3.91',
-    category: 'Music',
-  },
-  {
-    id: 62,
-    name: 'Hatity',
-    description: 'Horizontal client-server migration',
-    price: '4.85',
-    category: 'Music',
-  },
-  {
-    id: 110,
-    name: 'Fixflex',
-    description: 'Mandatory intangible function',
-    price: '5.29',
-    category: 'Music',
-  },
-  {
-    id: 216,
-    name: 'Bitwolf',
-    description: 'Streamlined 4th generation definition',
-    price: '1.51',
-    category: 'Music',
-  },
-  {
-    id: 277,
-    name: 'Treeflex',
-    description: 'Innovative didactic framework',
-    price: '4.38',
-    category: 'Music',
-  },
-  {
-    id: 1,
-    name: 'Duobam',
-    description: 'Implemented even-keeled info-mediaries',
-    price: '7.77',
-    category: 'Outdoors',
-  },
-  {
-    id: 17,
-    name: 'Matsoft',
-    description: 'Operative static orchestration',
-    price: '8.73',
-    category: 'Outdoors',
-  },
-  {
-    id: 37,
-    name: 'Lotlux',
-    description: 'Proactive tangible support',
-    price: '8.87',
-    category: 'Outdoors',
-  },
-  {
-    id: 81,
-    name: 'Transcof',
-    description: 'Phased foreground extranet',
-    price: '7.63',
-    category: 'Outdoors',
-  },
-  {
-    id: 82,
-    name: 'Overhold',
-    description: 'Multi-layered maximized application',
-    price: '5.86',
-    category: 'Outdoors',
-  },
-  {
-    id: 207,
-    name: 'Cardguard',
-    description: 'Diverse asynchronous moratorium',
-    price: '5.80',
-    category: 'Outdoors',
-  },
-  {
-    id: 338,
-    name: 'Stronghold',
-    description: 'De-engineered didactic open architecture',
-    price: '2.11',
-    category: 'Outdoors',
-  },
-  {
-    id: 57,
-    name: 'Stim',
-    description: 'Compatible multimedia hierarchy',
-    price: '3.08',
-    category: 'Shoes',
-  },
-  {
-    id: 119,
-    name: 'Latlux',
-    description: 'Proactive fault-tolerant hardware',
-    price: '0.38',
-    category: 'Shoes',
-  },
-  {
-    id: 32,
-    name: 'Andalax',
-    description: 'Persistent multi-tasking intranet',
-    price: '6.66',
-    category: 'Sports',
-  },
-  {
-    id: 43,
-    name: 'Y-find',
-    description: 'User-centric 5th generation project',
-    price: '0.86',
-    category: 'Sports',
-  },
-  {
-    id: 84,
-    name: 'Tresom',
-    description: 'Managed directional hub',
-    price: '8.07',
-    category: 'Sports',
-  },
-  {
-    id: 156,
-    name: 'Voyatouch',
-    description: 'Decentralized 4th generation migration',
-    price: '7.69',
-    category: 'Sports',
-  },
-  {
-    id: 4,
-    name: 'Keylex',
-    description: 'Phased 24/7 capability',
-    price: '5.41',
-    category: 'Tools',
-  },
-  {
-    id: 49,
-    name: 'Toughjoyfax',
-    description: 'Assimilated responsive secured line',
-    price: '6.85',
-    category: 'Tools',
-  },
-  {
-    id: 64,
-    name: 'Flowdesk',
-    description: 'Cloned systemic contingency',
-    price: '4.41',
-    category: 'Tools',
-  },
-  {
-    id: 153,
-    name: 'Greenlam',
-    description: 'Centralized zero defect collaboration',
-    price: '3.16',
-    category: 'Tools',
-  },
-  {
-    id: 21,
-    name: 'Kanlam',
-    description: 'Cloned encompassing time-frame',
-    price: '9.52',
-    category: 'Toys',
-  },
-  {
-    id: 28,
-    name: 'Prodder',
-    description: 'Ameliorated object-oriented hierarchy',
-    price: '1.47',
-    category: 'Toys',
-  },
-  {
-    id: 139,
-    name: 'Asoka',
-    description: 'Phased analyzing array',
-    price: '3.72',
-    category: 'Toys',
-  },
-  {
-    id: 172,
-    name: 'Alpha',
-    description: 'Up-sized full-range database',
-    price: '8.64',
-    category: 'Toys',
-  },
+	{
+		"id": "1",
+		"name": "Nest",
+		"description": "Programmable WiFi Thermostat 3 Heat 2 Cool (HP/AC) 3rd Gen Stainless Steel Ring",
+		"price": "207",
+		"category": "Thermostats"
+	},
+	{
+		"id": "2",
+		"name": "iComfort S30",
+		"description": "Lennox iComfort S30 Ultra Smart Programmable Thermostat",
+		"price": "458",
+		"category": "Thermostats"
+	},
+	{
+		"id": "3",
+		"name": "T6 Pro 2/2",
+		"description": "Honeywell T6 Pro Programmable Thermostat 2 Heat 1 Cool (HP) 2 Heat 2 Cool (AC)",
+		"price": "84.4",
+		"category": "Thermostats"
+	},
+	{
+		"id": "4",
+		"name": "T6 Pro 1/1",
+		"description": "Honeywell T6 Pro Programmable Thermostat 2 Heat 1 Cool (HP) 1 Heat 1 Cool (AC)",
+		"price": "62.53",
+		"category": "Thermostats"
+	},
+	{
+		"id": "5",
+		"name": "CS7500",
+		"description": "Lennox CS7500 Comfortsense 7500 Universal Programmable Thermostat",
+		"price": "154",
+		"category": "Thermostats"
+	},
+	{
+		"id": "6",
+		"name": "Merv 11 16x25",
+		"description": "Healthy Climate HCF16-11 16 in. x 25 in. x 5 in. Replacement Filter MERV 11",
+		"price": "21.31",
+		"category": "Filtration"
+	},
+	{
+		"id": "7",
+		"name": "Merv 16 16x25",
+		"description": "Healthy Climate HCF16-16 16 in. x 25 in. x 5 in. Carbon Clean Replacement Filter MERV 16",
+		"price": "95.61",
+		"category": "Filtration"
+	},
+	{
+		"id": "8",
+		"name": "Merv 11 20x25",
+		"description": "Healthy Climate HCF16-16 16 in. x 25 in. x 5 in. Carbon Clean Replacement Filter MERV 16",
+		"price": "22.97",
+		"category": "Filtration"
+	},
+	{
+		"id": "9",
+		"name": "Merv16 20x25",
+		"description": "Healthy Climate HCF20-16 20 in. x 25 in. x 5 in. Carbon Clean Replacement Filter MERV 16",
+		"price": "111",
+		"category": "Filtration"
+	},
+	{
+		"id": "10",
+		"name": "PCO16-28",
+		"description": "Healthy Climate PureAir LB-113713B Annual Maintenance Kit for PCO16-28",
+		"price": "177",
+		"category": "IAQ"
+	},
+	{
+		"id": "11",
+		"name": "PCO20-28",
+		"description": "Healthy Climate PureAir LB-113713A Annual Maintenance Kit for PCO20-28",
+		"price": "186",
+		"category": "IAQ"
+	},
+	{
+		"id": "12",
+		"name": "PCO316-16",
+		"description": "Healthy Climate PureAir 612988-02 Annual Maintenance Kit for PCO3-16-16",
+		"price": "127",
+		"category": "IAQ"
+	},
+	{
+		"id": "13",
+		"name": "PCO320-16",
+		"description": "Healthy Climate PureAir 612988-01 Annual Maintenance Kit for PCO3-20-16",
+		"price": "127",
+		"category": "IAQ"
+	},
+	{
+		"id": "14",
+		"name": "16 in. PureAir",
+		"description": "Healthy Climate PureAir PCO3-16-16 Air Purification System",
+		"price": "638",
+		"category": "IAQ"
+	},
+	{
+		"id": "15",
+		"name": "20 in. PureAir",
+		"description": "Healthy Climate PureAir PCO3-20-16 Air Purification System",
+		"price": "638",
+		"category": "IAQ"
+	},
+	{
+		"id": "16",
+		"name": "1/6Hp 1075/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3727",
+		"price": "54.89",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "17",
+		"name": "1/4Hp 1075/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3728",
+		"price": "52.25",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "18",
+		"name": "1/3Hp 1075/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3729",
+		"price": "54.76",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "19",
+		"name": "1/2Hp 1075/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3730",
+		"price": "62.96",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "20",
+		"name": "3/4Hp 1075/1 208-230V 1Ph Ball Cond Mtr",
+		"description": "PP3731",
+		"price": "77.44",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "21",
+		"name": "1/6Hp 825/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3403",
+		"price": "72.63",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "22",
+		"name": "1/4Hp 825/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3404",
+		"price": "83.03",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "23",
+		"name": "1/3Hp 825/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3405",
+		"price": "86.49",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "24",
+		"name": "1/2Hp 825/1 208-230V 1Ph Slv Cond Mtr",
+		"description": "PP3746",
+		"price": "91.04",
+		"category": "Condenser Fan Motors"
+	},
+	{
+		"id": "25",
+		"name": "5 Mfd 370V Oval Cap",
+		"description": "PPS5370OV",
+		"price": "1.37",
+		"category": "Capacitors"
+	},
+	{
+		"id": "26",
+		"name": "7.5 Mfd 370V Oval Cap",
+		"description": "PPS75370OV",
+		"price": "1.56",
+		"category": "Capacitors"
+	},
+	{
+		"id": "27",
+		"name": "10 Mfd 370V Oval Cap",
+		"description": "PPS10370OV",
+		"price": "1.81",
+		"category": "Capacitors"
+	},
+	{
+		"id": "28",
+		"name": "12.5 Mfd 370V Oval Cap",
+		"description": "PPS125370OV",
+		"price": "2.09",
+		"category": "Capacitors"
+	},
+	{
+		"id": "29",
+		"name": "15 Mfd 370V Oval Cap",
+		"description": "PPS15370OV",
+		"price": "2.16",
+		"category": "Capacitors"
+	},
+	{
+		"id": "30",
+		"name": "3 Mfd 440V Oval Cap",
+		"description": "PPS3440OV",
+		"price": "1.65",
+		"category": "Capacitors"
+	},
+	{
+		"id": "31",
+		"name": "4 Mfd 440V Oval Cap",
+		"description": "PPS4440OV",
+		"price": "1.7",
+		"category": "Capacitors"
+	},
+	{
+		"id": "32",
+		"name": "5 Mfd 440V Oval Cap",
+		"description": "PPS5440OV",
+		"price": "1.67",
+		"category": "Capacitors"
+	},
+	{
+		"id": "33",
+		"name": "10 Mfd 440V Oval Cap",
+		"description": "PPS10440OV",
+		"price": "2.16",
+		"category": "Capacitors"
+	},
+	{
+		"id": "34",
+		"name": "12.5 Mfd 440V Oval Cap",
+		"description": "PPS125440OV",
+		"price": "2.44",
+		"category": "Capacitors"
+	},
+	{
+		"id": "35",
+		"name": "15 Mfd 440V Oval Cap",
+		"description": "PPS15440OV",
+		"price": "2.81",
+		"category": "Capacitors"
+	},
+	{
+		"id": "36",
+		"name": "20 Mfd 440V Oval Cap",
+		"description": "PPS20440OV",
+		"price": "3.48",
+		"category": "Capacitors"
+	},
+	{
+		"id": "37",
+		"name": "25 Mfd 440V Oval Cap",
+		"description": "PPS25440OV",
+		"price": "4",
+		"category": "Capacitors"
+	},
+	{
+		"id": "38",
+		"name": "30 Mfd 440V Oval Cap",
+		"description": "PPS30440OV",
+		"price": "4.38",
+		"category": "Capacitors"
+	},
+	{
+		"id": "39",
+		"name": "35 Mfd 440V Oval Cap",
+		"description": "PPS35440OV",
+		"price": "4.79",
+		"category": "Capacitors"
+	},
+	{
+		"id": "40",
+		"name": "40 Mfd 440V Oval Cap",
+		"description": "PPS40440OV",
+		"price": "5.14",
+		"category": "Capacitors"
+	},
+	{
+		"id": "41",
+		"name": "45 Mfd 440V Oval Cap",
+		"description": "PPS45440OV",
+		"price": "5.5",
+		"category": "Capacitors"
+	},
+	{
+		"id": "42",
+		"name": "50 Mfd 440V Oval Cap",
+		"description": "PPS50440OV",
+		"price": "6.26",
+		"category": "Capacitors"
+	},
+	{
+		"id": "43",
+		"name": "5 Mfd 440V Round Cap",
+		"description": "PPS5440RD",
+		"price": "1.74",
+		"category": "Capacitors"
+	},
+	{
+		"id": "44",
+		"name": "7.5 Mfd 440V Round Cap",
+		"description": "PPS75440RD",
+		"price": "1.9",
+		"category": "Capacitors"
+	},
+	{
+		"id": "45",
+		"name": "10 Mfd 440V Round Cap",
+		"description": "PPS10440RD",
+		"price": "2.77",
+		"category": "Capacitors"
+	},
+	{
+		"id": "46",
+		"name": "20 Mfd 440V Round Cap",
+		"description": "PPS20440RD",
+		"price": "3.22",
+		"category": "Capacitors"
+	},
+	{
+		"id": "47",
+		"name": "20/5 Mfd 440V Round Cap",
+		"description": "PPS520440RD",
+		"price": "5.31",
+		"category": "Capacitors"
+	},
+	{
+		"id": "48",
+		"name": "25 Mfd 440V Round Cap",
+		"description": "PPS25440RD",
+		"price": "3.71",
+		"category": "Capacitors"
+	},
+	{
+		"id": "49",
+		"name": "25/5 Mfd 440V Round Cap",
+		"description": "PPS525440RD",
+		"price": "8.6",
+		"category": "Capacitors"
+	},
+	{
+		"id": "50",
+		"name": "30/5 Mfd 440V Round Cap",
+		"description": "PPS530440RD",
+		"price": "7.32",
+		"category": "Capacitors"
+	},
+	{
+		"id": "51",
+		"name": "30/7.5 Mfd 440V Round Cap",
+		"description": "PPS7530440RD",
+		"price": "5.26",
+		"category": "Capacitors"
+	},
+	{
+		"id": "52",
+		"name": "35 Mfd 440V Round Cap",
+		"description": "PPS35440RD",
+		"price": "3.87",
+		"category": "Capacitors"
+	},
+	{
+		"id": "53",
+		"name": "35/5 Mfd 440V Round Cap",
+		"description": "PPS535440RD",
+		"price": "6.86",
+		"category": "Capacitors"
+	},
+	{
+		"id": "54",
+		"name": "35/7.5 Mfd 440V Round Cap",
+		"description": "PPS7535440RD",
+		"price": "6.98",
+		"category": "Capacitors"
+	},
+	{
+		"id": "55",
+		"name": "35/10 Mfd 440V Round Cap",
+		"description": "PPS1035440RD",
+		"price": "8.02",
+		"category": "Capacitors"
+	},
+	{
+		"id": "56",
+		"name": "40 Mfd 440V Round Cap",
+		"description": "PPS40440RD",
+		"price": "4.88",
+		"category": "Capacitors"
+	},
+	{
+		"id": "57",
+		"name": "40/5 Mfd 440V Round Cap",
+		"description": "PPS540440RD",
+		"price": "10.07",
+		"category": "Capacitors"
+	},
+	{
+		"id": "58",
+		"name": "40/7.5 Mfd 440V Round Cap",
+		"description": "PPS7540440RD",
+		"price": "7.48",
+		"category": "Capacitors"
+	},
+	{
+		"id": "59",
+		"name": "40/10 Mfd 440V Round Cap",
+		"description": "PPS1040440RD",
+		"price": "6.54",
+		"category": "Capacitors"
+	},
+	{
+		"id": "60",
+		"name": "45 Mfd 440V Round Cap",
+		"description": "PPS45440RD",
+		"price": "4.88",
+		"category": "Capacitors"
+	},
+	{
+		"id": "61",
+		"name": "45/5 Mfd 440V Round Cap",
+		"description": "PPS545440RD",
+		"price": "7.37",
+		"category": "Capacitors"
+	},
+	{
+		"id": "62",
+		"name": "45/7.5 Mfd 440V Round Cap",
+		"description": "PPS7545440RD",
+		"price": "8.53",
+		"category": "Capacitors"
+	},
+	{
+		"id": "63",
+		"name": "45/10 Mfd 440V Round Cap",
+		"description": "PPS1045440RD",
+		"price": "7.38",
+		"category": "Capacitors"
+	},
+	{
+		"id": "64",
+		"name": "50 Mfd 440V Round Cap",
+		"description": "PPS50440RD",
+		"price": "5.54",
+		"category": "Capacitors"
+	},
+	{
+		"id": "65",
+		"name": "50/5 Mfd 440V Round Cap",
+		"description": "PPS550440RD",
+		"price": "7.56",
+		"category": "Capacitors"
+	},
+	{
+		"id": "66",
+		"name": "50/7.5 Mfd 440V Round Cap",
+		"description": "PPS7550440RD",
+		"price": "8.64",
+		"category": "Capacitors"
+	},
+	{
+		"id": "67",
+		"name": "55 Mfd 440V Round Cap",
+		"description": "PPS55440RD",
+		"price": "7",
+		"category": "Capacitors"
+	},
+	{
+		"id": "68",
+		"name": "55/5 Mfd 440V Round Cap",
+		"description": "PPS555440RD",
+		"price": "7.54",
+		"category": "Capacitors"
+	},
+	{
+		"id": "69",
+		"name": "55/7.5 Mfd 440V Round Cap",
+		"description": "PPS7555440RD",
+		"price": "9.25",
+		"category": "Capacitors"
+	},
+	{
+		"id": "70",
+		"name": "55/10 Mfd 440V Round Cap",
+		"description": "PPS1055440RD",
+		"price": "7.43",
+		"category": "Capacitors"
+	},
+	{
+		"id": "71",
+		"name": "60 Mfd 440V Round Cap",
+		"description": "PPS60440RD",
+		"price": "7.6",
+		"category": "Capacitors"
+	},
+	{
+		"id": "72",
+		"name": "60/5 Mfd 440V Round Cap",
+		"description": "PPS560440RD",
+		"price": "8.64",
+		"category": "Capacitors"
+	},
+	{
+		"id": "73",
+		"name": "60/7.5 Mfd 440V Round Cap",
+		"description": "PPS7560440RD",
+		"price": "8.11",
+		"category": "Capacitors"
+	},
+	{
+		"id": "74",
+		"name": "60/10 Mfd 440V Round Cap",
+		"description": "PPS1060440RD",
+		"price": "8.72",
+		"category": "Capacitors"
+	},
+	{
+		"id": "75",
+		"name": "65 Mfd 440V Round Cap",
+		"description": "PPS65440RD",
+		"price": "6.91",
+		"category": "Capacitors"
+	},
+	{
+		"id": "76",
+		"name": "65/5 Mfd 440V Round Cap",
+		"description": "PPS565440RD",
+		"price": "6.93",
+		"category": "Capacitors"
+	},
+	{
+		"id": "77",
+		"name": "65/7.5 Mfd 440V Round Cap",
+		"description": "PPS7565440RD",
+		"price": "7.2",
+		"category": "Capacitors"
+	},
+	{
+		"id": "78",
+		"name": "65/10 Mfd 440V Round Cap",
+		"description": "PPS1065440RD",
+		"price": "7.02",
+		"category": "Capacitors"
+	},
+	{
+		"id": "79",
+		"name": "70 Mfd 440V Round Cap",
+		"description": "PPS7044RD",
+		"price": "16.68",
+		"category": "Capacitors"
+	},
+	{
+		"id": "80",
+		"name": "70/5 Mfd 440V Round Cap",
+		"description": "PPS570440RD",
+		"price": "10.28",
+		"category": "Capacitors"
+	},
+	{
+		"id": "81",
+		"name": "70/7.5 Mfd 440V Round Cap",
+		"description": "PPS7570440RD",
+		"price": "8.67",
+		"category": "Capacitors"
+	},
+	{
+		"id": "82",
+		"name": "70/10 Mfd 440V Round Cap",
+		"description": "PPS1070440RD",
+		"price": "8.81",
+		"category": "Capacitors"
+	},
+	{
+		"id": "83",
+		"name": "80 Mfd 440V Round Cap",
+		"description": "PPS80440RD",
+		"price": "12.03",
+		"category": "Capacitors"
+	},
+	{
+		"id": "84",
+		"name": "80/5 Mfd 440V Round Cap",
+		"description": "PPS58044RD",
+		"price": "11.1",
+		"category": "Capacitors"
+	},
+	{
+		"id": "85",
+		"name": "80/7.5 Mfd 440V Round Cap",
+		"description": "PPS7580440RD",
+		"price": "17.19",
+		"category": "Capacitors"
+	},
+	{
+		"id": "86",
+		"name": "80/10 Mfd 440V Round Cap",
+		"description": "PPS1080440RD",
+		"price": "9.17",
+		"category": "Capacitors"
+	},
+	{
+		"id": "87",
+		"name": "1-3 Ton Compressor Saver",
+		"description": "CSR-U-1",
+		"price": "26.87",
+		"category": "Compressor Savers"
+	},
+	{
+		"id": "88",
+		"name": "3-5 Ton Compressor Saver",
+		"description": "CSR-U-2",
+		"price": "32.58",
+		"category": "Compressor Savers"
+	},
+	{
+		"id": "89",
+		"name": "4-5 Ton Compressor Saver",
+		"description": "CSR-U-3",
+		"price": "37.13",
+		"category": "Compressor Savers"
+	},
+	{
+		"id": "90",
+		"name": "Universal Hard Start Kit 115-230V",
+		"description": "ICM866U",
+		"price": "37.17",
+		"category": "Hard Start Kits"
+	},
+	{
+		"id": "91",
+		"name": "Kickstart To5 Hardstart 1-3 Ton",
+		"description": "96503",
+		"price": "31.7",
+		"category": "Hard Start Kits"
+	},
+	{
+		"id": "92",
+		"name": "Kickstart Ks-1 Hardstart 3.5-5 Ton",
+		"description": "96506",
+		"price": "33.67",
+		"category": "Hard Start Kits"
+	},
+	{
+		"id": "93",
+		"name": "1P 30A 24V Contactor",
+		"description": "PPCON1P30A24V",
+		"price": "6.59",
+		"category": "Single Pole Contactors"
+	},
+	{
+		"id": "94",
+		"name": "1P 30A 120v Contactor",
+		"description": "PPCON1P30A120",
+		"price": "6.43",
+		"category": "Single Pole Contactors"
+	},
+	{
+		"id": "95",
+		"name": "1P 40A 24V Contactor",
+		"description": "PPCON1P40A24V",
+		"price": "8.42",
+		"category": "Single Pole Contactors"
+	},
+	{
+		"id": "96",
+		"name": "2P 30A 24V Contactor",
+		"description": "PPCON2P30A24V",
+		"price": "8.69",
+		"category": "2 Pole Contactors"
+	},
+	{
+		"id": "97",
+		"name": "2P 30A 120V Contactor",
+		"description": "PPCON2P30A120",
+		"price": "8.09",
+		"category": "2 Pole Contactors"
+	},
+	{
+		"id": "98",
+		"name": "2P 30A 240V Contactor",
+		"description": "PPCON2P30A240",
+		"price": "8.09",
+		"category": "2 Pole Contactors"
+	},
+	{
+		"id": "99",
+		"name": "2P 40A 24V Contactor",
+		"description": "PPCON2P40A24V",
+		"price": "9.5",
+		"category": "2 Pole Contactors"
+	},
+	{
+		"id": "100",
+		"name": "3P 30A 24V Contactor",
+		"description": "PPCON3P30A24V",
+		"price": "15.08",
+		"category": "3 Pole Contactors"
+	},
+	{
+		"id": "101",
+		"name": "3P 30A 240V Contactor",
+		"description": "PPCON3P30A240",
+		"price": "16.36",
+		"category": "3 Pole Contactors"
+	},
+	{
+		"id": "102",
+		"name": "3P 40A 24V Contactor",
+		"description": "PPCON3P40A24V",
+		"price": "16.71",
+		"category": "3 Pole Contactors"
+	},
+	{
+		"id": "103",
+		"name": "3P 40A 120V Contactor",
+		"description": "PPCON3P40A120",
+		"price": "16.27",
+		"category": "3 Pole Contactors"
+	},
+	{
+		"id": "104",
+		"name": "3P 40A 240V Contactor",
+		"description": "PPCON3P40A240",
+		"price": "16.71",
+		"category": "3 Pole Contactors"
+	},
+	{
+		"id": "105",
+		"name": "3P 35A 24V Contactor",
+		"description": "PPCON3P50A24V",
+		"price": "43.29",
+		"category": "3 Pole Contactors"
+	}
 ];
 
 // inventory = _.uniqBy(inventory, 'name')
@@ -583,6 +744,3 @@ const c = inventory.map(item => item.category);
 
 export const categories = _.uniq(c);
 export default sortedInventory;
-
-// console.log(inventory)
-// console.log(categories)
